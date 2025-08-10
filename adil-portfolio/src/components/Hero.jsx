@@ -5,7 +5,7 @@ const GITHUB = "https://github.com/adilW-2005/";
 
 export default function Hero() {
   return (
-    <header id="home" className="relative overflow-hidden">
+    <header id="home" className="relative overflow-hidden pt-16 md:pt-0">
       <div className="max-w-6xl mx-auto px-4 min-h-[calc(100svh-80px)] flex items-center relative z-0">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 w-full relative top-4 md:top-6 lg:top-8">
           <div className="flex-1 flex flex-col items-start gap-4">

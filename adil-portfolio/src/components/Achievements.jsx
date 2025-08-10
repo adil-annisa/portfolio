@@ -10,11 +10,11 @@ export default function Achievements() {
   return (
     <section id="achievements" aria-labelledby="achievements-title" className="section">
       <h2 id="achievements-title" className="section-title"><span className="title-gradient">Awards & Achievements</span></h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
         {achievements.map((a, idx) => (
-          <article key={idx} className="card hover-card p-6">
-            <h3 className="text-lg font-semibold text-[#BF5700]">{a.title}</h3>
-            <p className="text-slate-700 mt-2">{a.description}</p>
+          <article key={idx} className="card hover-card p-4 sm:p-6">
+            <h3 className="text-base sm:text-lg font-semibold text-[#BF5700]">{a.title}</h3>
+            <p className="text-slate-700 mt-2 text-sm sm:text-base">{a.description}</p>
           </article>
         ))}
       </div>

@@ -83,14 +83,14 @@ export default function Skills() {
   return (
     <section id="skills" aria-labelledby="skills-title" className="section">
       <h2 id="skills-title" className="section-title"><span className="title-gradient">Skills & Technologies</span></h2>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
         {groups.map((group) => (
-          <div key={group.category} className="card p-6">
-            <h3 className="text-xl font-semibold mb-3 text-[#BF5700]">{group.category}</h3>
+          <div key={group.category} className="card p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#BF5700]">{group.category}</h3>
             <div className="flex flex-wrap gap-2">
               {group.items.map((item) => (
-                <span key={item.label} className="badge">
-                  {item.icon && <span aria-hidden className="text-orange-600">{item.icon}</span>}
+                <span key={item.label} className="badge text-sm">
+                  {item.icon && <span aria-hidden className="text-orange-600 text-base">{item.icon}</span>}
                   <span>{item.label}</span>
                 </span>
               ))}

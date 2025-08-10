@@ -95,16 +95,16 @@ export default function Projects() {
   return (
     <section id="projects" aria-labelledby="projects-title" className="section">
       <h2 id="projects-title" className="section-title"><span className="title-gradient">Projects</span></h2>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
         {all.map((p) => (
           <article key={p.title} className="card hover-card overflow-hidden">
             <div className="aspect-[16/9] bg-white/5 overflow-hidden">
               <img className="h-full w-full object-cover" src={p.images?.[0] || "/placeholders/project-default.png"} alt={`${p.title} screenshot`} />
             </div>
-            <div className="p-6 space-y-3">
+            <div className="p-4 sm:p-6 space-y-3">
               <div className="flex items-center justify-between gap-4">
-                <h3 className="text-xl font-semibold">{p.title}</h3>
-                <div className="flex gap-2">
+                <h3 className="text-lg sm:text-xl font-semibold">{p.title}</h3>
+                <div className="flex gap-2 text-sm sm:text-base">
                   {p.links?.github && (
                     <a className="text-orange-600" href={p.links.github} target="_blank" rel="noreferrer">GitHub</a>
                   )}
@@ -113,23 +113,23 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-              <p className="text-slate-700">{p.description}</p>
+              <p className="text-slate-700 text-sm sm:text-base">{p.description}</p>
               {p.tech?.length > 0 && (
-                <div className="flex flex-wrap gap-2 pt-2">
+                <div className="flex flex-wrap gap-2 pt-1 sm:pt-2">
                   {p.tech.map((t) => (
                     <span key={t} className="badge">{t}</span>
                   ))}
                 </div>
               )}
               {p.images?.length > 1 && (
-                <div className="grid grid-cols-3 gap-2 pt-2">
+                <div className="grid grid-cols-3 gap-2 pt-1 sm:pt-2">
                   {p.images.slice(1).map((img, i) => (
                     <img key={i} src={img} alt="Project gallery" className="h-20 w-full object-cover rounded-lg opacity-95 hover:opacity-100 transition" />
                   ))}
                 </div>
               )}
               {p.highlights?.length > 0 && (
-                <ul className="list-disc pl-5 text-slate-700 space-y-1">
+                <ul className="list-disc pl-5 text-slate-700 space-y-1 text-sm sm:text-base">
                   {p.highlights.map((h, i) => (
                     <li key={i}>{h}</li>
                   ))}

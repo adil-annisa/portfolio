@@ -73,20 +73,20 @@ export default function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-title" className="section">
       <h2 id="experience-title" className="section-title"><span className="title-gradient">Experience</span></h2>
-      <div className="timeline space-y-6">
+      <div className="timeline space-y-4 sm:space-y-6">
         {roles.map((job, idx) => (
-          <article key={idx} className="timeline-item card hover-card p-6">
+          <article key={idx} className="timeline-item card hover-card p-4 sm:p-6">
             <header className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-xl font-semibold">{job.role} — {job.company}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">{job.role} — {job.company}</h3>
               {(() => {
                 const range = [job.start, job.end].filter(Boolean).join(" – ");
                 const parts = [job.location, range].filter(Boolean);
                 return parts.length ? (
-                  <span className="text-slate-600 text-sm">{parts.join(" • ")}</span>
+                  <span className="text-slate-600 text-xs sm:text-sm">{parts.join(" • ")}</span>
                 ) : null;
               })()}
             </header>
-            <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
+            <ul className="mt-2 sm:mt-3 list-disc pl-5 text-slate-700 space-y-1 text-sm sm:text-base">
               {job.bullets.map((b, i) => (
                 <li key={i}>{b}</li>
               ))}

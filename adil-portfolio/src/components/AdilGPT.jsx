@@ -37,7 +37,7 @@ function Message({ role, content }) {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
-        className={`max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2 text-sm md:text-base shadow-sm border ${
+        className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3 py-2 text-sm md:text-base shadow-sm border ${
           isUser
             ? "bg-orange-500 text-slate-900 border-orange-400"
             : "bg-white text-slate-800 border-orange-200"
@@ -60,6 +60,7 @@ export default function AdilGPT() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const containerRef = useRef(null);
+  const textareaRef = useRef(null);
 
   // Capture site context on mount
   const siteContext = useMemo(() => buildSiteContext(), []);
@@ -68,6 +69,19 @@ export default function AdilGPT() {
     if (!containerRef.current) return;
     containerRef.current.scrollTop = containerRef.current.scrollHeight;
   }, [messages]);
+
+  useEffect(() => {
+    if (!textareaRef.current) return;
+    const el = textareaRef.current;
+    const resize = () => {
+      el.style.height = 'auto';
+      el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+    };
+    resize();
+    const handler = () => setTimeout(resize, 0);
+    el.addEventListener('input', handler);
+    return () => el.removeEventListener('input', handler);
+  }, []);
 
   async function sendMessage(e) {
     e?.preventDefault();
@@ -142,22 +156,26 @@ export default function AdilGPT() {
         <span className="title-gradient">AdilGPT</span>
       </h2>
       <div className="card p-0 overflow-hidden">
-        <div className="px-4 py-3 border-b border-orange-100 flex items-center justify-between">
+        <div className="px-3 sm:px-4 py-2 sm:py-3 border-b border-orange-100 flex items-center justify-between">
           <div className="text-slate-800 font-medium">Chat with AdilGPT</div>
-         
         </div>
-        <div ref={containerRef} className="max-h-[420px] overflow-y-auto p-3 space-y-3 bg-white/70">
+        <div ref={containerRef} className="max-h-[50svh] sm:max-h-[420px] overflow-y-auto p-2 sm:p-3 space-y-3 bg-white/70">
           {messages.map((m, i) => (
             <Message key={i} role={m.role} content={m.content} />
           ))}
         </div>
-        <form onSubmit={sendMessage} className="border-t border-orange-100 p-3 flex items-end gap-2 bg-white">
+        <form onSubmit={sendMessage} className="border-t border-orange-100 p-2 sm:p-3 flex items-end gap-2 bg-white">
           <textarea
+            ref={textareaRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about Adil's projects, experience, or skills..."
             className="flex-1 resize-none rounded-xl border border-orange-200 px-3 py-2 text-sm md:text-base bg-white focus:outline-none focus:ring-2 focus:ring-orange-300"
             rows={2}
+            enterKeyHint="send"
+            autoComplete="off"
+            autoCorrect="on"
+            spellCheck
           />
           <button
             type="submit"
@@ -168,7 +186,6 @@ export default function AdilGPT() {
           </button>
         </form>
       </div>
-      
     </section>
   );
 } 

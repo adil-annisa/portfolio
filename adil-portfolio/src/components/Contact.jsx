@@ -7,9 +7,9 @@ export default function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="section">
       <h2 id="contact-title" className="section-title"><span className="title-gradient">Let’s build something</span></h2>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8">
         <form
-          className="card p-6 space-y-4"
+          className="card p-4 sm:p-6 space-y-3 sm:space-y-4"
           onSubmit={(e) => {
             e.preventDefault();
             const form = e.currentTarget;
@@ -33,14 +33,14 @@ export default function Contact() {
           </label>
           <button className="btn-gradient rounded-xl px-5 py-3 font-medium">Send</button>
         </form>
-        <aside className="card p-6 space-y-4">
+        <aside className="card p-4 sm:p-6 space-y-3 sm:space-y-4">
           <div>
-            <p className="text-slate-700">Prefer email?</p>
-            <a className="text-orange-600 underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <p className="text-slate-700 text-sm sm:text-base">Prefer email?</p>
+            <a className="text-orange-600 underline text-sm sm:text-base" href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </div>
           <div className="flex gap-4">
-            <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-700"><FaLinkedin aria-hidden /> <span>LinkedIn</span></a>
-            <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-700"><FaGithub aria-hidden /> <span>GitHub</span></a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-700 text-sm sm:text-base"><FaLinkedin aria-hidden /> <span>LinkedIn</span></a>
+            <a href={GITHUB} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-700 text-sm sm:text-base"><FaGithub aria-hidden /> <span>GitHub</span></a>
           </div>
         </aside>
       </div>

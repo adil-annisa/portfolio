@@ -1,0 +1,7 @@
+/* Purge default Vite styles to favor Tailwind */
+#root {
+  width: 100%;
+}
+.logo, .card, .read-the-docs {
+  all: unset;
+}

@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node/JS builds
+adil-portfolio/node_modules/
+adil-portfolio/dist/
+
+# Env files
+adil-portfolio/.env
+adil-portfolio/.env.*
+
+# Editor directories and files
+.vscode/
+.idea/ 

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --ink: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { background-color: #ffffff; color: #0f172a; }
+
+/**** Layout Utilities ****/
+.container-px {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  max-width: 72rem; /* 1152px ~ container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+/**** Titles ****/
+.section-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-title { font-size: 2.25rem; } /* md:text-4xl */
+}
+
+/* Update gradients and accents to orange theme */
+.title-gradient {
+  background: linear-gradient(90deg, #ff8400 0%, #ff8400 40%, #ff8400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 120px;
+  height: 3px;
+  border-radius: 9999px;
+  background: #BF5700;
+  opacity: 0.9;
+}
+
+/**** Cards & Accents (orange + white) ****/
+.card { background-color: #ffffff; color: #0f172a; border: 1px solid rgba(191,87,0,0.15); border-radius: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.04); }
+.card a { color: #ea580c; }
+.card a:hover { text-decoration: underline; }
+.card h3 { color: #0f172a; }
+.card p, .card li { color: #334155; }
+.hover-card { position: relative; }
+
+.badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #fff4ed; border: 1px solid #ffdfcc; color: #9a3412; }
+.badge svg { color: #ea580c; }
+.section-divider { height: 1px; margin-top: 0rem; margin-bottom: 0rem; background-color: #f1f5f9; }
+
+/**** Timeline ****/
+.timeline { position: relative; padding-left: 1.25rem; border-left: 1px solid #f1f5f9; }
+.timeline-item { position: relative; margin-left: -1.25rem; padding-left: 1.25rem; }
+.timeline-item::before { content: ""; position: absolute; left: -0.4rem; top: 1.1rem; width: 0.6rem; height: 0.6rem; background: #BF5700; border-radius: 9999px; box-shadow: 0 0 0 3px rgba(255,255,255,0.9); }
+
+/**** Buttons & Inputs ****/
+.btn-gradient { background: linear-gradient(90deg, #FB923C, #F59E0B); color: #0f172a; border: none; }
+.btn-gradient:hover { filter: none; transform: none; }
+.input { background-color: #ffffff; border: 1px solid rgba(191,87,0,0.25); border-radius: 0.5rem; padding: 0.5rem 0.75rem; color: #0f172a; width: 100%; }
+.input:focus { outline: none; border-color: rgba(234,88,12,0.7); box-shadow: 0 0 0 3px rgba(249,115,22,0.25); }
+
+/**** Nav underline animation ****/
+.nav-link { position: relative; }
+.nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 9999px; background: #BF5700; transform: scaleX(0); transform-origin: left; transition: transform 200ms ease; }
+.nav-link.active::after { transform: scaleX(1); }

@@ -1,0 +1,663 @@
+{
+  "experience": [
+    {
+      "title": "Goldman Sachs",
+      "category": "Software Engineering Intern",
+      "dates": "Summer 2026 · Dallas, TX",
+      "overview": "Worked on the cloud migration and data architecture of a collateral-management platform supporting $70B+ in assets. I helped migrate four Java/Spring Boot services, 40+ REST APIs, and three databases from Kubernetes to AWS ECS, redesigned transactional and analytical data flows across Aurora, DocumentDB, and DuckDB, and built an incremental synchronization pipeline with validation, checkpoints, and audit logging for production cutover. The new architecture reduced analytical compute by 89% and infrastructure costs by 79%.",
+      "keywords": [
+        "Distributed Systems",
+        "Java",
+        "Spring Boot",
+        "AWS",
+        "Data Infrastructure",
+        "Cloud Migration"
+      ],
+      "sections": [
+        {
+          "title": "Platform & cloud migration",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on a collateral-management platform supporting more than $70B in assets. Its services handled collateral eligibility, concentration limits, borrowing-base calculations, reporting, and warehouse-lending workflows."
+            },
+            {
+              "type": "text",
+              "text": "I helped migrate four Java/Spring Boot services, more than 40 REST APIs, and three databases from Kubernetes to AWS ECS using Docker and AWS CDK. The work involved service communication, data placement, and keeping the old and new environments consistent during the transition."
+            }
+          ]
+        },
+        {
+          "title": "Data synchronization & cutover",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I owned an incremental synchronization pipeline that moved collateral data from MongoDB and SingleStore into Aurora. Schema validation checked incoming records, while checkpoints and audit logs made migration progress traceable."
+            },
+            {
+              "type": "text",
+              "text": "Incremental transfers let us move and verify data gradually. Migration verification and recovery support helped the team check consistency and recover during production cutover."
+            }
+          ]
+        },
+        {
+          "title": "Data architecture & results",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked across Aurora, DocumentDB, and DuckDB to separate transactional workloads from heavy analytical processing. This let the architecture handle operational data and reporting through distinct data flows."
+            },
+            {
+              "type": "text",
+              "text": "The redesigned architecture reduced analytical compute by 89% and infrastructure costs by 79%, while giving the team a more reliable path to production cutover."
+            }
+          ]
+        }
+      ],
+      "id": "goldman-sachs"
+    },
+    {
+      "title": "CharityStack",
+      "category": "Software Engineer",
+      "dates": "2025–2026 · Austin, TX",
+      "overview": "Worked across CharityStack’s in-person donation product and payment infrastructure for a platform supporting $50M+ in contributions. I led development of the mobile donation flow using Stripe Terminal and built Go services on Google Cloud Functions with Pub/Sub to process payment events asynchronously and reliably. The result was an end-to-end fundraising experience that let nonprofit staff accept card-present donations directly from their mobile devices.",
+      "keywords": [
+        "Payments",
+        "Mobile",
+        "Go",
+        "GCP",
+        "Pub/Sub",
+        "Stripe"
+      ],
+      "sections": [
+        {
+          "title": "In-person donation experience",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "CharityStack provides fundraising infrastructure for nonprofits and supports more than $50M in contributions. I led development of its mobile application for staff accepting donations at events, fundraisers, and other in-person activities."
+            },
+            {
+              "type": "text",
+              "text": "I built the flow from entering donation information and identifying or creating a donor through collecting a card-present payment with Stripe Terminal. The experience also handled cancellations, failed payments, and successful confirmations so staff could return to fundraising quickly."
+            }
+          ]
+        },
+        {
+          "title": "Payment events & backend reliability",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built Go services on Google Cloud Functions and used Pub/Sub to process payment events asynchronously. Payment state changes and downstream work needed to be handled independently of the mobile interaction."
+            },
+            {
+              "type": "text",
+              "text": "Because events can arrive later or retry, the backend needed to support a payment workflow that was not perfectly synchronous. My work connected the donor-facing product with the event-driven infrastructure behind it."
+            }
+          ]
+        }
+      ],
+      "id": "charitystack"
+    },
+    {
+      "title": "An-Nisa Hope Center",
+      "category": "Software Engineering Intern",
+      "dates": "Summer 2025 · Houston, TX",
+      "overview": "Built internal and public-facing software for a nonprofit supporting survivors of domestic violence and families in need, replacing manual spreadsheet-heavy workflows with production applications. I worked across food pantry operations, education, payments, volunteer coordination, grant reporting, and an AI assistant using TypeScript, Angular, PostgreSQL, Python, RAG, and Vertex AI Vector Search. The systems supported hundreds of clients and students while reducing manual administrative work by roughly 50%.",
+      "keywords": [
+        "Product Engineering",
+        "Operations",
+        "Full Stack",
+        "RAG",
+        "Nonprofit Tech",
+        "Automation"
+      ],
+      "sections": [
+        {
+          "title": "Operational context & impact",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "An-Nisa supports survivors of domestic violence and families in need. Staff were coordinating client records, pantry activity, education, finances, and volunteers through spreadsheets, forms, and disconnected tools."
+            },
+            {
+              "type": "text",
+              "text": "I turned these workflows into internal and public-facing applications. Across the systems, the software reduced manual administrative work by roughly 50%, giving staff more time to spend on services rather than reconciling records."
+            }
+          ]
+        },
+        {
+          "title": "Pantry & education platforms",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The food pantry platform supported roughly 500 people each month. I built client intake and eligibility workflows alongside visit records, inventory batches, per-visit limits, client history, staff roles, and operational auditing."
+            },
+            {
+              "type": "text",
+              "text": "I also built an education portal used by roughly 500 students. It organized educational content and programming in one place, reducing reliance on scattered materials and manual coordination."
+            }
+          ]
+        },
+        {
+          "title": "Payments, volunteers & reporting",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on payment tracking, financial logging, volunteer onboarding, and follow-up workflows. These tools brought recurring administrative tasks into applications staff could use in their daily work."
+            },
+            {
+              "type": "text",
+              "text": "I also helped automate the information collection and reporting needed for grants. Nonprofits need to show how funding and services are used, so reducing manual report assembly was an important part of the operational work."
+            }
+          ]
+        },
+        {
+          "title": "Website & information retrieval",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on the public website and built an assistant over An-Nisa-specific information to help visitors find services and answers without manually searching the site."
+            },
+            {
+              "type": "text",
+              "text": "The assistant retrieved relevant organization content before generating an answer, using Python, retrieval-augmented generation, and Vertex AI Vector Search. This connected the public information experience with the organization’s own source material."
+            }
+          ]
+        }
+      ],
+      "id": "an-nisa-hope-center"
+    },
+    {
+      "title": "University of Texas at Austin",
+      "category": "Machine Learning Research · Soil Moisture Forecasting",
+      "dates": "",
+      "overview": "Worked on deep-learning models for forecasting soil moisture from more than 300,000 hourly measurements collected across six monitoring stations over roughly six years. I built preprocessing for missing data and temporal features, trained and compared LSTM, CNN, and Transformer architectures, and evaluated how well the models generalized across stations rather than only fitting individual locations. The work focused on improving forecasting accuracy while building a more reliable cross-station evaluation pipeline.",
+      "keywords": [
+        "Machine Learning",
+        "Time Series",
+        "Forecasting",
+        "Transformers",
+        "Research"
+      ],
+      "sections": [
+        {
+          "title": "Forecasting problem & data",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I investigated how well historical sensor measurements could predict future soil-moisture levels. The dataset contained more than 300,000 hourly measurements from six stations over roughly six years."
+            },
+            {
+              "type": "text",
+              "text": "Missing observations, seasonal patterns, temporal dependencies, and differences between stations all shaped the work. The evaluation needed to capture how models performed across locations as well as on a single station."
+            }
+          ]
+        },
+        {
+          "title": "Modeling & evaluation",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built preprocessing for missing data, temporal features, normalization, and sequence generation, then trained and compared LSTM, CNN, and Transformer architectures."
+            },
+            {
+              "type": "text",
+              "text": "Cross-station validation tested whether the approaches generalized to different locations and conditions. The best-performing approach improved forecasting accuracy relative to the baseline; the broader focus was building a reliable pipeline for comparing models."
+            }
+          ]
+        }
+      ],
+      "id": "ut-austin"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Helm",
+      "category": "AI-Native Project Management · Retrieval · Agents · Backend Systems",
+      "dates": "",
+      "overview": "Built Helm after seeing project context scattered across tickets, docs, meetings, code, Slack, and other tools. Helm is a multi-tenant project-management platform that unifies that information into a searchable workspace using Python/FastAPI, gRPC, PostgreSQL, Redis, hybrid retrieval, and agent workflows. I worked on the backend, indexing and retrieval pipeline, integrations, and Google ADK/MCP-based agent system that can answer workspace questions and execute actions across connected tools.",
+      "keywords": [
+        "FastAPI",
+        "gRPC",
+        "PostgreSQL",
+        "Redis",
+        "Hybrid Retrieval",
+        "ADK",
+        "MCP",
+        "Agents"
+      ],
+      "sections": [
+        {
+          "title": "Product & motivation",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built Helm because understanding a project meant reconstructing context from tickets, meeting decisions, Slack conversations, GitHub code, and Notion specifications. I wanted that information to be available within the same workspace as the work itself."
+            },
+            {
+              "type": "text",
+              "text": "Helm brings tickets, sprints, documents, meetings, code, integrations, and project knowledge into a multi-tenant project-management platform. It is used across several product teams managing thousands of tickets, and is where I have worked most deeply across backend systems, retrieval, agents, and product engineering."
+            }
+          ]
+        },
+        {
+          "title": "Backend & integrations",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked across backend infrastructure, indexing, retrieval, project integrations, and agent tool execution. The backend uses Python/FastAPI, with gRPC and Protocol Buffers for service communication."
+            },
+            {
+              "type": "text",
+              "text": "PostgreSQL stores core application data, while Redis supports caching and asynchronous workflows. Connected tools such as GitHub, Slack, and Notion bring project context into the workspace and provide actions the agent system can execute."
+            }
+          ]
+        },
+        {
+          "title": "Retrieval, indexing & evaluation",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built a hybrid retrieval pipeline that combines semantic search with BM25 keyword matching. Semantic retrieval finds related meaning; BM25 captures exact ticket IDs, names, technical vocabulary, and phrases. Reciprocal Rank Fusion combines the rankings, then a cross-encoder reranks the strongest candidates before they become context for an answer."
+            },
+            {
+              "type": "text",
+              "text": "Incremental indexing tracks document changes so only updated content needs to be chunked, embedded, and indexed again. This avoids repeatedly processing unchanged information."
+            },
+            {
+              "type": "text",
+              "text": "I evaluated retrieval against labeled queries using Recall@K and NDCG, measuring whether relevant results were found and how highly they ranked. This made it possible to compare approaches beyond manually inspecting generated responses."
+            }
+          ]
+        },
+        {
+          "title": "Agents, tools & task evaluation",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built an agent system using Google ADK and MCP, separating planning, retrieval, and execution responsibilities. Agents can use more than 35 tools across Helm, GitHub, Slack, Notion, and connected project systems."
+            },
+            {
+              "type": "text",
+              "text": "The workflows can answer workspace questions, gather context, create project artifacts, update tickets, produce project updates, and execute multi-step actions. I evaluated task success, tool selection, and tool-use accuracy to assess whether the system completed the intended work."
+            }
+          ]
+        }
+      ],
+      "id": "helm",
+      "link": {
+        "href": "https://www.helmpm.app/",
+        "label": "Visit Helm"
+      }
+    },
+    {
+      "title": "UT Student Living",
+      "category": "Mobile · Realtime Systems · Firestore · Maps",
+      "dates": "",
+      "overview": "Built a cross-platform roommate-management app after dealing with the friction of coordinating expenses, chores, events, messages, and shared responsibilities during my first year at UT. The app uses Flutter/Dart with a Node.js backend, Firestore for shared household state, WebSockets for realtime interactions, and Google Maps for location and nearby-place features. I built the product around keeping multiple roommates synchronized across expenses, chores, voting, messaging, live location, and navigation.",
+      "keywords": [
+        "Flutter",
+        "Node.js",
+        "Firestore",
+        "WebSockets",
+        "Google Maps",
+        "Mobile"
+      ],
+      "sections": [
+        {
+          "title": "Student living & product scope",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "During my first year at UT, coordinating expenses, chores, groceries, and plans with roommates meant switching between apps and group chats. I built UT Student Living as one place for the day-to-day work of sharing a home."
+            },
+            {
+              "type": "text",
+              "text": "The app brings together expenses, chores, events, inventory, a marketplace, messaging, group voting, live location, nearby places, and navigation. I built it as a cross-platform mobile product and published it to the Apple App Store."
+            }
+          ]
+        },
+        {
+          "title": "Shared state & location",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The central engineering challenge was keeping household information consistent when different roommates updated it. I used Firestore for shared household data and WebSockets for realtime functionality."
+            },
+            {
+              "type": "text",
+              "text": "Google Maps, geocoding, and routing services supported nearby-place discovery and navigation. These features connected household coordination with the places and activities students needed to reach."
+            }
+          ]
+        }
+      ],
+      "id": "roomsync",
+      "link": {
+        "href": "https://apps.apple.com/us/app/ut-student-living/id6751765214",
+        "label": "View on the App Store"
+      }
+    },
+    {
+      "title": "InReach",
+      "category": "Outreach Automation · APIs · OAuth · AI",
+      "dates": "",
+      "overview": "Built InReach during my first year at UT to automate the process I was using to find internship and research opportunities. The platform takes a resume and target role, discovers relevant contacts through Apollo, generates personalized outreach, and sends approved messages through Gmail using OAuth. I built the end-to-end workflow with Angular and Flask, coordinating contact enrichment, AI generation, user approval, email delivery, and outreach tracking for a product used by more than 2,000 people.",
+      "keywords": [
+        "Angular",
+        "Flask",
+        "Gmail API",
+        "OAuth",
+        "Apollo",
+        "LLMs"
+      ],
+      "sections": [
+        {
+          "title": "From personal workflow to product",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built InReach during my first year at UT while searching for internship and research opportunities. Finding the right people, researching them, writing individual messages, and tracking responses made outreach a time-consuming process."
+            },
+            {
+              "type": "text",
+              "text": "Apollo’s contact-discovery API gave me a way to bring those steps together. The product grew to more than 2,000 users, with an end-to-end workflow built in Angular and Flask."
+            }
+          ]
+        },
+        {
+          "title": "Discovery, approval & delivery",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Users provide a resume, the opportunity they want, and target roles or companies. InReach uses Apollo for contact discovery and enrichment, then combines that information with the user’s background to generate personalized outreach."
+            },
+            {
+              "type": "text",
+              "text": "Users review and approve or reject messages before sending. Gmail OAuth connects their own account for delivery, and the application tracks outreach, bringing discovery, generation, approval, and sending into one flow."
+            }
+          ]
+        }
+      ],
+      "id": "inreach",
+      "link": {
+        "href": "https://www.inreachai.com/",
+        "label": "Visit InReach"
+      }
+    },
+    {
+      "title": "Amanah",
+      "category": "Fintech · Policy Engine · Nonprofit Infrastructure",
+      "dates": "",
+      "overview": "Built Amanah at HackMSA to solve a problem I had seen firsthand in nonprofit operations: grant restrictions and spending rules are often checked only after money has already been spent. Amanah moves those controls to the point of purchase by connecting grants, policy rules, and virtual cards, then evaluating each transaction against deterministic authorization logic. I worked on the backend policy engine and payment flow using TypeScript, PostgreSQL, Stripe Issuing, Zod, and automated tests.",
+      "keywords": [
+        "Stripe Issuing",
+        "Policy Engine",
+        "PostgreSQL",
+        "TypeScript",
+        "Fintech"
+      ],
+      "sections": [
+        {
+          "title": "Grant restrictions at the point of purchase",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built Amanah at HackMSA after seeing how nonprofit spending rules are often checked after money has already been spent. Grants and restricted donations can limit vendors, spending amounts, categories, and which programs may use the funds."
+            },
+            {
+              "type": "text",
+              "text": "Amanah moves those checks to transaction authorization. Connecting grants, policy rules, virtual cards, and spending requests allows the system to decide whether a purchase should be permitted when it is attempted."
+            }
+          ]
+        },
+        {
+          "title": "Policy engine & payment decisions",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on the backend rules and payment flow. The policy engine evaluates grant balance, transaction amount, merchant, spending category, approval threshold, and program restrictions, then returns an explicit approval or decline."
+            },
+            {
+              "type": "text",
+              "text": "The rules are deterministic and testable, with Stripe Issuing providing the virtual-card and payment layer. I used TypeScript, PostgreSQL, Zod, and automated tests to represent and validate the authorization logic."
+            }
+          ]
+        }
+      ],
+      "id": "amanah",
+      "link": {
+        "href": "https://github.com/adilW-2005/hack-msa",
+        "label": "View GitHub repository"
+      }
+    },
+    {
+      "title": "Counterclaim",
+      "category": "Healthcare · Retrieval · Agents · Document Processing",
+      "dates": "",
+      "overview": "Built a multi-stage workflow for turning insurance denials into structured appeal packages by combining patient context, clinical evidence, and supporting documentation. The system uses FastAPI, Next.js, FHIR-related data, retrieval, and LLM workflows to move from denial extraction to patient history, guideline retrieval, evidence gathering, drafting, review, and PDF generation. I worked on patient uploads, chart retrieval, backend schemas, pipeline orchestration, retrieval, and parts of the interface.",
+      "keywords": [
+        "FastAPI",
+        "Next.js",
+        "FHIR",
+        "Retrieval",
+        "Agents",
+        "LLMs"
+      ],
+      "sections": [
+        {
+          "title": "Appeal workflow & evidence",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Appealing an insurance denial requires understanding the denial, inspecting patient history, finding clinical guidance, and assembling supporting documentation. We built Counterclaim to structure and assist that workflow."
+            },
+            {
+              "type": "text",
+              "text": "The system moves from denial extraction through patient context, guideline retrieval, evidence gathering, drafting, review, and PDF generation. Each stage produces structured information for the next, rather than relying on one model call for the entire appeal."
+            }
+          ]
+        },
+        {
+          "title": "My implementation work",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I contributed patient uploads, chart retrieval, backend schemas, pipeline orchestration, retrieval, and parts of the interface. These pieces connected the incoming documents and patient information with the evidence and drafting stages."
+            },
+            {
+              "type": "text",
+              "text": "The application uses FastAPI, Next.js, FHIR-related data, retrieval, and LLM workflows to assemble an appeal package through distinct processing and review steps."
+            }
+          ]
+        }
+      ],
+      "id": "counterclaim",
+      "link": {
+        "href": "https://github.com/AymanMahfuz27/Counterclaim",
+        "label": "View GitHub repository"
+      }
+    },
+    {
+      "title": "Texas Convergent — BounceBack",
+      "category": "Mobile · Social Product · Firebase",
+      "dates": "",
+      "overview": "Worked with a Texas Convergent team on BounceBack, a mobile product designed to reduce social isolation and help users build stronger real-world connections. I contributed to the React Native/Expo application and Firebase-backed product experience while working inside a shared team codebase. The project gave me experience translating a broader product goal into mobile features while collaborating closely with other engineers and product members.",
+      "keywords": [
+        "React Native",
+        "Expo",
+        "Firebase",
+        "Mobile",
+        "Product"
+      ],
+      "sections": [
+        {
+          "title": "Mobile product & collaboration",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "BounceBack was a Texas Convergent team project focused on reducing social isolation and helping people build stronger real-world connections. I contributed to the React Native/Expo application and its Firebase-backed product experience."
+            },
+            {
+              "type": "text",
+              "text": "Working in a shared codebase meant collaborating with engineers and product members to translate that broader goal into mobile features. My work focused on the application as part of the larger team effort."
+            }
+          ]
+        }
+      ],
+      "id": "bounceback"
+    },
+    {
+      "title": "An-Nisa Projects",
+      "category": "Operations · Full Stack · Nonprofit Software",
+      "dates": "",
+      "overview": "Built a collection of internal and public-facing products for An-Nisa covering food pantry operations, education, payments, volunteer workflows, reporting, the public website, and an AI assistant. The systems used web applications, databases, and retrieval tooling to replace disconnected forms and spreadsheets with software staff could use directly in day-to-day operations. The largest products supported hundreds of monthly pantry clients and students while reducing manual administrative work across the organization.",
+      "keywords": [
+        "Operations",
+        "Angular",
+        "PostgreSQL",
+        "RAG",
+        "Automation",
+        "Product Engineering"
+      ],
+      "sections": [
+        {
+          "title": "Food pantry platform",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I built a pantry system supporting roughly 500 people each month, bringing client intake, eligibility, visit records, and inventory into one workflow. Staff could track inventory batches and per-visit limits alongside client history."
+            },
+            {
+              "type": "text",
+              "text": "Staff roles and audit history supported day-to-day oversight. The system replaced disconnected records with a shared view of pantry and client activity."
+            }
+          ]
+        },
+        {
+          "title": "Education & staff operations",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The education portal organized programming and curriculum information for roughly 500 students, making materials easier to access and coordinate."
+            },
+            {
+              "type": "text",
+              "text": "I also built tools for payment tracking, financial logging, volunteer onboarding, and follow-ups, and helped automate grant reporting. Together, these applications reduced repetitive administrative work across the organization."
+            }
+          ]
+        },
+        {
+          "title": "Public website & AI assistant",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The public website made An-Nisa’s services and information easier to find. I paired that experience with a retrieval-based assistant that helped visitors ask questions about the organization’s content."
+            },
+            {
+              "type": "text",
+              "text": "The assistant retrieved relevant information before generating answers, using Python, RAG, and Vertex AI Vector Search. Its purpose was to help visitors locate useful information without searching through the site manually."
+            }
+          ]
+        }
+      ],
+      "id": "annisa-systems"
+    }
+  ],
+  "research": [
+    {
+      "title": "Hurricane Helene",
+      "category": "NLP · Social Data · Disaster Analysis",
+      "dates": "",
+      "overview": "Analyzed more than 8,000 YouTube items related to Hurricane Helene to study how online discussion, sentiment, and emotion changed around the event. I worked on data collection, preprocessing, NLP-based sentiment and emotion analysis, temporal analysis, and visualization using Python. The project produced a research poster and visual analysis connecting changes in online discussion to different stages of the hurricane and its impacts.",
+      "keywords": [
+        "NLP",
+        "Python",
+        "Sentiment Analysis",
+        "Data Analysis",
+        "Visualization"
+      ],
+      "sections": [
+        {
+          "title": "Research question & dataset",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I studied how online discussion, sentiment, and emotion evolved around Hurricane Helene using more than 8,000 YouTube items related to the event."
+            },
+            {
+              "type": "text",
+              "text": "The research examined changes over time and their relationship to stages of the hurricane, including event- and outage-related discussion."
+            }
+          ]
+        },
+        {
+          "title": "Analysis & research output",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on data collection, preprocessing, NLP-based sentiment and emotion analysis, temporal analysis, and visualization in Python."
+            },
+            {
+              "type": "text",
+              "text": "The project produced a research poster and visual analysis connecting changes in discussion to the hurricane and its impacts. The poster presents the analysis and its evolution over the event."
+            }
+          ]
+        }
+      ],
+      "id": "hurricane-helene",
+      "links": [
+        {
+          "href": "/media/helene-research.pdf",
+          "label": "View research poster"
+        },
+        {
+          "href": "https://github.com/adilW-2005/Hurricane-Helene-SentimentAnalysis",
+          "label": "View GitHub repository"
+        }
+      ]
+    },
+    {
+      "title": "Soil Moisture Forecasting",
+      "category": "Time Series · Deep Learning · Environmental Data",
+      "dates": "",
+      "overview": "Studied how LSTM, CNN, and Transformer architectures perform when forecasting soil moisture across multiple sensor stations and several years of hourly environmental data. I worked on missing-data preprocessing, temporal feature engineering, sequence construction, training, and cross-station validation over more than 300,000 observations. The research focused on both predictive accuracy and whether models could generalize across locations with different environmental conditions.",
+      "keywords": [
+        "Time Series",
+        "LSTM",
+        "CNN",
+        "Transformers",
+        "Python"
+      ],
+      "sections": [
+        {
+          "title": "Forecasting across locations",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The research asked how accurately historical measurements could forecast future soil moisture and whether the models could generalize across monitoring stations. The dataset contained more than 300,000 hourly observations from six stations over roughly six years."
+            },
+            {
+              "type": "text",
+              "text": "Generalization was the central question: performance on familiar conditions alone does not establish whether a model will work across different locations and environmental patterns."
+            }
+          ]
+        },
+        {
+          "title": "Preprocessing, models & validation",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "I worked on missing-data preprocessing, temporal feature engineering, normalization, sequence construction, and model training. I compared LSTM, CNN, and Transformer architectures using baseline comparisons and cross-station validation."
+            },
+            {
+              "type": "text",
+              "text": "The evaluation considered predictive accuracy alongside performance across locations. This connected the modeling work with a broader assessment of how well each approach handled variation in environmental conditions."
+            }
+          ]
+        }
+      ],
+      "id": "soil-moisture"
+    }
+  ]
+}

@@ -1,35 +1,26 @@
-import './App.css'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import AdilGPT from './components/AdilGPT'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Achievements from './components/Achievements'
-import Contact from './components/Contact'
-
-function App() {
+import { lazy, Suspense } from "react";
+import { Header, Footer } from "./site/Layout";
+import Home from "./site/Home";
+import SignalRibbon from "./site/SignalRibbon";
+const HelmCaseStudy = lazy(() => import("./site/HelmCaseStudy"));
+export default function App() {
+  const caseStudy = /^\/work\/helm\/?$/.test(window.location.pathname);
   return (
-    <div id="content">
-      <Nav />
-      <main>
-        <Hero />
-        <AdilGPT />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Achievements />
-        <Contact />
+    <>
+      <SignalRibbon />
+      <Header caseStudy={caseStudy} />
+      <main id="main" className="page-shell" tabIndex="-1">
+        <Suspense
+          fallback={
+            <p className="page-loading" role="status">
+              Opening the case study…
+            </p>
+          }
+        >
+          {caseStudy ? <HelmCaseStudy /> : <Home />}
+        </Suspense>
       </main>
-      <footer className="section text-center text-slate-600">
-        <p>© {new Date().getFullYear()} Adil Waheed. Built with React + Vite + Tailwind.</p>
-      </footer>
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }
-
-export default App

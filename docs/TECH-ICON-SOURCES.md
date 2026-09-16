@@ -1,0 +1,30 @@
+# Technology icon sources
+
+- Java: https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg
+- Python: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/python.svg
+- Go: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/go.svg
+- C++: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cplusplus.svg
+- TypeScript: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg
+- JavaScript: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/javascript.svg
+- Spring Boot: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/springboot.svg
+- FastAPI: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/fastapi.svg
+- Node.js: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg
+- React: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg
+- Angular: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/angular.svg
+- Flutter: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/flutter.svg
+- Swift: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/swift.svg
+- AWS: https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg
+- Google Cloud: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlecloud.svg
+- Docker: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/docker.svg
+- Kubernetes: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/kubernetes.svg
+- PostgreSQL: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postgresql.svg
+- Redis: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/redis.svg
+- Firestore: https://services.google.com/fh/files/misc/google-cloud-legacy-icons.zip (firestore/firestore.svg)
+- MongoDB: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/mongodb.svg
+- Stripe: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/stripe.svg
+- GitHub: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg
+- Linux: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linux.svg
+- Firebase: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/firebase.svg
+- Google Maps: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlemaps.svg
+- Gmail: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/gmail.svg
+- Next.js: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nextdotjs.svg
